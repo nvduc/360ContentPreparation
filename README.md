@@ -7,7 +7,7 @@ Required OS: Ubuntu 18.04 (The code should also be working on newer Ubuntu versi
 1. Install prerequisites and setup default g++
 
 ```
-sudo apt-get install ffmpeg perl g++4.8 svn
+sudo apt-get install ffmpeg perl g++-4.8 svn
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 10
 ```
 After this step, the default version of g++ should be 4.8. Check g++ version using the following command.

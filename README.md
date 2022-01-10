@@ -58,6 +58,12 @@ cp Encoders/SHM-9.0/bin/TAppEncoderStatic bin/TAppEncoderSHVC
 ```
 3. Generate video tiles
 ```
+cd Dataset
+mkdir RollerCoaster
+mkdir RollerCoaster/face
+mkdir RollerCoaster/6f_2x2
+mkdir RollerCoaster/6f_2x2/log
+mkdir RollerCoaster/6f_2x2/tile_yuv
 ffmpeg -i Rollercoaster_3840x1920_65_75.mkv Rollercoaster_3840x1920_65_75.yuv
 perl 3_script_create_tile_cube.pl
 ```

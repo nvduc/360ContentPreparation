@@ -1,8 +1,10 @@
 # 360 Content Preparation
 ## Overview
-This code is used to prepare ``360-degree video`` for ``Viewport Adaptive Streaming``. 
+This code is used to prepare ``360-degree video`` for ``Viewport Adaptive Streaming`` in the following paper.
 
-Required OS: Ubuntu 18.04 (The code should also be working on newer Ubuntu version.)
+[1] D. V. Nguyen, H. Van Trung, H. L. Dieu Huong, T. T. Huong, N. P. Ngoc and T. C. Thang, "Scalable 360 Video Streaming using HTTP/2," 2019 IEEE 21st International Workshop on Multimedia Signal Processing (MMSP), 2019, pp. 1-6, doi: 10.1109/MMSP.2019.8901805.
+
+Required OS: Ubuntu 18.04 (The code should also be working on newer Ubuntu versions.)
 ## How to use
 1. Install prerequisites and setup default g++
 

@@ -16,11 +16,13 @@ g++ --version
 ```
 
 2. Download encoders source files
-
-360 Processing Library
 ```
 git clone https://github.com/nvduc/360ContentPreparation.git
 cd 360ContentPreparation
+```
+
+360 Processing Library
+```
 mkdir Encoders
 cd Encoders
 mkdir 360Lib

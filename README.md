@@ -1,14 +1,44 @@
 # 360 Content Preparation
 ## Overview
 This code is used to prepare ``360-degree video`` for ``Viewport Adaptive Streaming``. 
+
+Required OS: Ubuntu 18.04 (The code should also be working on newer Ubuntu version.)
 ## How to use
 1. Install prerequisites and setup default g++
 
 ```
-sudo apt-get install ffmpeg perl g++4.8
+sudo apt-get install ffmpeg perl g++4.8 svn
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 10
 ```
-2. Build 360 Converter, HEVC Encoder, and SHVC Encoder
+After this step, the default version of g++ should be 4.8. Check g++ version using the following command.
+```
+g++ --version
+```
+
+2. Download encoders source files
+
+360 Processing Library
+```
+mkdir Encoders
+cd Encoders
+mkdir 360Lib
+cd 360Lib/
+svn checkout https://hevc.hhi.fraunhofer.de/svn/svn_HEVCSoftware/tags/HM-16.16
+svn checkout https://jvet.hhi.fraunhofer.de/svn/svn_360Lib/tags/360Lib-5.0
+cp -R ./360Lib-5.0/source/Lib/TLib360 ./HM-16.16/source/Lib/
+cp -R ./360Lib-5.0/source/Lib/TAppEncHelper360 ./HM-16.16/source/Lib/
+cp -R ./360Lib-5.0/source/App/utils/TApp360Convert ./HM-16.16/source/App/utils/
+cp -R ./360Lib-5.0/cfg-360Lib ./HM-16.16/
+cp -R ./360Lib-5.0/HM-360Lib-5.0-build  ./HM-16.16/
+cd ../
+```
+HEVC and SHVC encoders
+```
+svn checkout https://hevc.hhi.fraunhofer.de/svn/svn_HEVCSoftware/tags/HM-16.9/
+svn checkout https://hevc.hhi.fraunhofer.de/svn/svn_SHVCSoftware/tags/SHM-9.0/
+```
+
+4. Build 360 Converter, HEVC Encoder, and SHVC Encoder
 
 ```
 cd Encoders/360Lib/HM-16.16/HM-360Lib-5.0-build/linux/

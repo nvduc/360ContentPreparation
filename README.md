@@ -60,7 +60,7 @@ cd ../../../../
 cp Encoders/360Lib/HM-16.16/bin/TApp360ConvertStatic bin/TApp360Convert
 cp Encoders/HM-16.9/bin/TAppEncoderStatic bin/TAppEncoderHEVC
 cp Encoders/SHM-9.0/bin/TAppEncoderStatic bin/TAppEncoderSHVC
-
+sudo chmod +x bin/*
 ```
 3. Generate video tiles
 ```

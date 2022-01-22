@@ -83,8 +83,15 @@ bash encode_HEVC.sh
 Each tile will be encoded into 5 versions with QP={38, 32, 28, 24, 20}. Each log file contains the encoding results of each version.
 
 5. Encode tiles into multiple layers using Scalable Video Coding (SHVC)
+
+Encode tiles into 2 layers: base layer: QP=38, enhancement layers: QP=32 (SNR-scalability).
 ```
 cd Encode_Tile_SHVC
 bash encode-SHVC-2layers.sh
 ```
-Each tile will be encoded using Scalabe Video Coding into 2 layers: base layer: QP=38, enhancement layers: QP=32 (SNR-scalability).
+
+Enode tiles into 5 layers: QP0=38, QP1=32, QP2=28, QP3=24, QP4=20 (SNR-scalability)
+```
+cd Encode_Tile_SHVC
+bash encode-SHVC-5layers.sh
+```

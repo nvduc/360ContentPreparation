@@ -98,8 +98,8 @@ bash encode-SHVC-5layers.sh
 6. Generate video tiles (ERP@3840x1920@8x8)
 ```
 cd Dataset
-mkdir RollerCoaster (skip if already performed step 2)
-ffmpeg -i Rollercoaster_3840x1920_65_75.mkv Rollercoaster_3840x1920_65_75.yuv (skip if already performed step 2)
+mkdir RollerCoaster (skip if already performed step 3)
+ffmpeg -i Rollercoaster_3840x1920_65_75.mkv Rollercoaster_3840x1920_65_75.yuv (skip if already performed step 3)
 perl 1_script_create_tile_erp.pl
 ```
 Encode tiles into 6 versions using x264 encoders: QP={40, 36, 32, 28, 24, 20}

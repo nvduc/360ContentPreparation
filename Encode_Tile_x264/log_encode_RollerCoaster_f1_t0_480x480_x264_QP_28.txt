@@ -1,0 +1,49 @@
+ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+[rawvideo @ 0x563f45e42a20] Estimating duration from bitrate, this may be inaccurate
+Input #0, rawvideo, from '../../SVC-Encoder-20220109T061506Z-001/SVC-Encoder/Dataset/RollerCoaster/6f_2x2/tile_yuv/f1_t0_480x480.yuv':
+  Duration: 00:00:10.00, start: 0.000000, bitrate: 82944 kb/s
+    Stream #0:0: Video: rawvideo (I420 / 0x30323449), yuv420p, 480x480, 82944 kb/s, 30 tbr, 30 tbn, 30 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x563f45e4fc60] using cpu capabilities: MMX2 SSE2Fast LZCNT SSSE3 SSE4.2 AVX
+[libx264 @ 0x563f45e4fc60] profile High, level 3.0
+Output #0, rawvideo, to 'RollerCoaster_f1_t0_480x480_x264_QP_28.h264':
+  Metadata:
+    encoder         : Lavf57.83.100
+    Stream #0:0: Video: h264 (libx264), yuv420p, 480x480, q=-1--1, 30 fps, 30 tbn, 30 tbc
+    Metadata:
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+frame=  125 fps=0.0 q=34.0 PSNR=Y:nan U:nan V:nan *:nan size=      91kB time=00:00:02.73 bitrate= 273.9kbits/s speed=5.46x    frame=  219 fps=218 q=34.0 PSNR=Y:nan U:nan V:nan *:nan size=     169kB time=00:00:05.86 bitrate= 236.6kbits/s speed=5.84x    frame=  300 fps=187 q=34.0 LPSNR=Y:inf U:inf V:inf *:inf size=     277kB time=00:00:09.93 bitrate= 228.1kbits/s speed=6.19x    
+video:277kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000000%
+[libx264 @ 0x563f45e4fc60] frame I:2     Avg QP:26.32  size: 18723  PSNR Mean Y:40.84 U:47.24 V:50.04 Avg:42.23 Global:42.11
+[libx264 @ 0x563f45e4fc60] frame P:76    Avg QP:27.66  size:  2331  PSNR Mean Y:38.95 U:46.61 V:49.21 Avg:40.43 Global:40.41
+[libx264 @ 0x563f45e4fc60] frame B:222   Avg QP:33.50  size:   309  PSNR Mean Y:38.59 U:46.58 V:49.25 Avg:40.09 Global:40.08
+[libx264 @ 0x563f45e4fc60] consecutive B-frames:  1.0%  0.7%  1.0% 97.3%
+[libx264 @ 0x563f45e4fc60] mb I  I16..4: 12.9% 79.4%  7.7%
+[libx264 @ 0x563f45e4fc60] mb P  I16..4:  0.3%  0.8%  0.2%  P16..4: 34.6% 11.1%  5.1%  0.0%  0.0%    skip:47.9%
+[libx264 @ 0x563f45e4fc60] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 26.3%  1.0%  0.1%  direct: 0.1%  skip:72.5%  L0:30.7% L1:67.3% BI: 2.0%
+[libx264 @ 0x563f45e4fc60] 8x8 transform intra:73.9% inter:64.9%
+[libx264 @ 0x563f45e4fc60] coded y,uvDC,uvAC intra: 64.7% 53.1% 7.7% inter: 4.4% 1.8% 0.0%
+[libx264 @ 0x563f45e4fc60] i16 v,h,dc,p: 19% 34% 23% 25%
+[libx264 @ 0x563f45e4fc60] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  7% 20% 26%  4%  8%  7% 13%  4% 10%
+[libx264 @ 0x563f45e4fc60] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 11% 22% 21%  4% 11%  7% 12%  4%  8%
+[libx264 @ 0x563f45e4fc60] i8c dc,h,v,p: 56% 25% 11%  8%
+[libx264 @ 0x563f45e4fc60] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x563f45e4fc60] ref P L0: 62.7% 21.7% 12.3%  3.3%
+[libx264 @ 0x563f45e4fc60] ref B L0: 83.8% 14.4%  1.8%
+[libx264 @ 0x563f45e4fc60] ref B L1: 82.2% 17.8%
+[libx264 @ 0x563f45e4fc60] PSNR Mean Y:38.696 U:46.596 V:49.243 Avg:40.192 Global:40.173 kb/s:226.55

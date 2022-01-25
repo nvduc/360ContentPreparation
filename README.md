@@ -62,7 +62,7 @@ cp Encoders/HM-16.9/bin/TAppEncoderStatic bin/TAppEncoderHEVC
 cp Encoders/SHM-9.0/bin/TAppEncoderStatic bin/TAppEncoderSHVC
 sudo chmod +x bin/*
 ```
-3. Generate video tiles (Cubemap-2840x1920-6x4)
+3. Generate video tiles (Cubemap@2840x1920@6x4)
 ```
 cd Dataset
 mkdir RollerCoaster

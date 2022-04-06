@@ -44,7 +44,7 @@ svn checkout https://hevc.hhi.fraunhofer.de/svn/svn_HEVCSoftware/tags/HM-16.9/
 svn checkout https://hevc.hhi.fraunhofer.de/svn/svn_SHVCSoftware/tags/SHM-9.0/
 ```
 
-4. Build 360 Converter, HEVC Encoder, and SHVC Encoder
+3. Build 360 Converter, HEVC Encoder, and SHVC Encoder
 
 ```
 cd Encoders/360Lib/HM-16.16/HM-360Lib-5.0-build/linux/
@@ -62,7 +62,7 @@ cp Encoders/HM-16.9/bin/TAppEncoderStatic bin/TAppEncoderHEVC
 cp Encoders/SHM-9.0/bin/TAppEncoderStatic bin/TAppEncoderSHVC
 sudo chmod +x bin/*
 ```
-3. Generate video tiles (Cubemap@2840x1920@6x4)
+4. Generate video tiles (Cubemap@2840x1920@6x4)
 ```
 cd Dataset
 mkdir RollerCoaster
@@ -75,14 +75,14 @@ perl 3_script_create_tile_cube.pl
 ```
 The video tiles will be saved into ``Dataset/RollerCoaster/6f_2x2/tile_yuv/`` folder
 
-4. Encode tiles into multiple versions using HEVC
+5. Encode tiles into multiple versions using HEVC
 ```
 cd Encode_Tile_HEVC/
 bash encode_HEVC.sh
 ```
 Each tile will be encoded into 5 versions with QP={38, 32, 28, 24, 20}. Each log file contains the encoding results of each version.
 
-5. Encode tiles into multiple layers using Scalable Video Coding (SHVC)
+6. Encode tiles into multiple layers using Scalable Video Coding (SHVC)
 
 Encode tiles into 2 layers: base layer: QP=38, enhancement layers: QP=32 (SNR-scalability).
 ```
@@ -95,7 +95,7 @@ Encode tiles into 5 layers: QP0=38, QP1=32, QP2=28, QP3=24, QP4=20 (SNR-scalabil
 cd Encode_Tile_SHVC
 bash encode-SHVC-5layers.sh
 ```
-6. Generate video tiles (ERP@3840x1920@8x8)
+7. Generate video tiles (ERP@3840x1920@8x8)
 ```
 cd Dataset
 mkdir RollerCoaster (skip if already performed step 3)

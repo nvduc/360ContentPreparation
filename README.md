@@ -104,6 +104,7 @@ perl 1_script_create_tile_erp.pl
 ```
 Encode tiles into 6 versions using x264 encoders: QP={40, 36, 32, 28, 24, 20}
 ```
+sudo apt-get install x264
 cd Encode_Tile_x264
 bash encode_x264.sh
 ```
